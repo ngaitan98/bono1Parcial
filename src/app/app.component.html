@@ -16,7 +16,7 @@
       <li class="list-group-item" style="background-color: red;color: white">
         TO DO
       </li>
-      <li class="list-group-item" *ngFor="let task of todoList" cdkDrag>{{task}}</li>
+      <li class="list-group-item" *ngFor="let task of todoList" cdkDrag>{{task}}<button class = "btn btn-link" (click) = "deleteTodo(task)">-</button></li>
       <li class="list-group-item">
           <div class="row" style="width:100%">
             <form>
@@ -37,7 +37,7 @@
   #doing = "cdkDropList">
     <ul class="list-group">
       <li class="list-group-item active">DOING</li>
-      <li class="list-group-item" *ngFor="let task of doingList" cdkDrag>{{task}}</li>
+      <li class="list-group-item" *ngFor="let task of doingList" cdkDrag>{{task}}<button class = "btn btn-link" (click) = "deleteDoing(task)">-</button></li>
       <li class="list-group-item">
           <div class="row" style="width:100%">
             <form>
@@ -58,7 +58,7 @@
   #done = "cdkDropList">
     <ul class="list-group">
       <li class="list-group-item" style="background-color: green;color: white">DONE</li>
-      <li class="list-group-item" *ngFor="let task of doneList" cdkDrag>{{task}}</li>
+      <li class="list-group-item" *ngFor="let task of doneList" cdkDrag>{{task}}<button class = "btn btn-link" (click) = "deleteDone(task)">-</button></li>
       <li class="list-group-item">
         <div class="row" style="width:100%">
           <form>
